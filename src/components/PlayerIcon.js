@@ -1,12 +1,14 @@
 import React from "react";
 
-const PlayerIcon = ({ image, name, rating }) => {
+const PlayerIcon = ({ image, name, rating, ratingImage }) => {
   return (
-    <div>
-      <img className="ui avatar image" src={image}/>
+    <div className="ui card">
+      <div className="image">
+        <img src={image} />
+      </div>
       <div className="content">
         <div className="header">{name}</div>
-        <div className="description">{rating}</div>
+        <div className="description">Rating: {rating}</div>
       </div>
     </div>
   );
